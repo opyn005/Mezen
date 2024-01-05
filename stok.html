@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="main/img/icon.png" />
+    <title>Data Sparepart</title>
+    <style>
+        /* Styling untuk navigasi */
+        nav {
+            background-color: #1abc9c;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            opacity: 0.9;
+            background-color: #3385ff;
+        }
+
+        /* Styling untuk tabel */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Styling untuk pagination */
+        .pagination {
+            clear: both;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        /* Styling untuk bagian kontrol data */
+        .data-controls {
+            margin-bottom: 15px;
+        }
+
+        .data-controls select,
+        .data-controls input[type="text"] {
+            margin-right: 10px;
+            padding: 5px;
+        }
+
+        /* Styling untuk data tidak tersedia */
+        .not-available {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigasi -->
+    <nav>
+        <ul>
+            <!-- Tautan untuk kembali ke halaman utama dan tautan untuk login -->
+            <li><a href="index.html" style="font-weight: bold;">&laquo; Back</a></li>
+            <li style="float: right;"><a href="main/index.php">LOGIN</a></li>
+        </ul>
+    </nav>
+    <br>
+    <center>
+        <!-- Judul halaman -->
+        <h2>Data Sparepart</h2>
+    </center>
+    <br>
+    <br>
+    <!-- Kontrol untuk Menampilkan Jumlah Entri dan Pencarian -->
+    <div class="data-controls">
+        <!-- Label untuk menampilkan jumlah entri -->
+        Show
+        <!-- Pilihan untuk menampilkan jumlah entri -->
+        <select id="showEntries">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+            <option>100</option>
+        </select>
+        entries
+        <!-- Kotak pencarian -->
+        <input type="text" id="searchInput" placeholder="Search...">
+    </div>
+
+    <!-- Tabel Data Sparepart -->
+    <table id="sparepartTable">
+        <!-- Kolom-kolom Tabel -->
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Sparepart</th>
+                <th>Stock</th>
+                <th>Harga</th>
+            </tr>
+        </thead>
+        <!-- Isi Tabel -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Kampas Rem</td>
+                <td>1</td>
+                <td>Rp. 37.000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Rantai</td>
+                <td>11</td>
+                <td>Rp. 65.000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Gir Depan belakang</td>
+                <td>6</td>
+                <td>Rp. 63.000</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Kampas Kopling</td>
+                <td>1</td>
+                <td>Rp. 148.000</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Piston</td>
+                <td>1</td>
+                <td>Rp. 38.000</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>V-belt</td>
+                <td>4</td>
+                <td>Rp. 43.000</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Relay Starter</td>
+                <td>6</td>
+                <td>Rp. 40.000</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Sokbreker Belakang</td>
+                <td>6</td>
+                <td>Rp. 180.000</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Oli Top One</td>
+                <td>2</td>
+                <td>Rp. 40.000</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Spion</td>
+                <td>5</td>
+                <td>Rp. 25.000</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Oli Yamalube</td>
+                <td class="not-available">Tidak Tersedia</td>
+                <td>Rp. 35.000</td>
+            </tr>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>ring piston</td>
+                <td>5</td>
+                <td>Rp. 60.000</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Filter Udara</td>
+                <td>2</td>
+                <td>Rp. 32.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Navigasi Halaman (Pagination) -->
+    <div class="pagination">
+        <!-- Link untuk navigasi halaman -->
+        <a href="#">&laquo; Prev</a>
+        <!-- Halaman aktif -->
+        <a href="#" class="active">1</a>
+        <!-- Link ke halaman berikutnya -->
+        <a href="#">Next &raquo;</a>
+    </div>
+
+    <!-- Bagian untuk Grafik atau Informasi Tambahan -->
+    <div id="chartContainer" style="height: 250px; width: 100%;"></div>
+    <br />
+
+    <!-- Script JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mendapatkan elemen-elemen yang diperlukan dari DOM
+            const showEntries = document.getElementById('showEntries');
+            const searchInput = document.getElementById('searchInput');
+            const tableRows = document.querySelectorAll('#sparepartTable tbody tr');
+
+            // Event listener untuk perubahan jumlah entri yang ditampilkan
+            showEntries.addEventListener('change', function() {
+                const selectedEntries = parseInt(showEntries.value);
+
+                for (let i = 0; i < tableRows.length; i++) {
+                    if (i < selectedEntries) {
+                        tableRows[i].style.display = ''; // Menampilkan baris sesuai pilihan
+                    } else {
+                        tableRows[i].style.display = 'none'; // Menyembunyikan baris
+                    }
+                }
+            });
+
+            // Event listener untuk pencarian data
+            searchInput.addEventListener('input', function() {
+                const searchText = searchInput.value.toLowerCase();
+
+                for (let i = 0; i < tableRows.length; i++) {
+                    const row = tableRows[i];
+                    let found = false;
+                    const rowData = row.getElementsByTagName('td');
+                    for (let j = 0; j < rowData.length; j++) {
+                        const cell = rowData[j];
+                        // Mencocokkan teks pencarian dengan data di tabel
+                        if (cell.innerHTML.toLowerCase().indexOf(searchText) > -1) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    // Menampilkan atau menyembunyikan baris berdasarkan hasil pencarian
+                    if (found) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

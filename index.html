@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon"
+      type="image/png"
+      href="main/img/icon.png" />
+      
+    <!-- Deklarasi judul dokumen -->
+    <title>MeZen</title>
+    <!-- Set karakter encoding dokumen -->
+    <meta charset="UTF-8">
+    <style>
+        /* Gaya-gaya untuk tata letak dan desain */
+
+        /* Gaya untuk latar belakang dan ukuran halaman */
+        body {
+            background: url(main/img/background.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Gaya untuk bagian navigasi */
+        nav {
+            background-color: #1abc9c;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 15px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            opacity: 0.9;
+            background-color: #3385ff;
+        }
+
+        /* Gaya untuk tata letak kolom-kolom */
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .columns {
+            width: 30%;
+            padding: 8px;
+        }
+
+        /* Gaya untuk daftar harga */
+        .price {
+            list-style-type: none;
+            border: 1px solid #eee;
+            margin: 0;
+            padding: 0;
+            transition: 0.3s;
+        }
+
+        .price:hover {
+            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .price .header {
+            background-color: #1abc9c;
+            color: white;
+            font-size: 25px;
+        }
+
+        .price li {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .price .grey {
+            background-color: #eee;
+            font-size: 20px;
+        }
+
+        /* Gaya untuk tombol */
+        .button {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .button:hover {
+            text-decoration: none;
+            color: white;
+            background-color: #2980b9;
+        }
+
+        /* Gaya untuk teks berwarna */
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+            background-color: #bbb;
+        }
+
+        .price li.bg-warning {
+            background-color: white;
+            color: black;
+        }
+
+        /* Gaya untuk teks pada latar belakang biru muda */
+        .bg-primary.text-white {
+            color: white;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-size: 35px;
+        }
+
+        /* Gaya untuk footer */
+        footer {
+            text-align: center;
+            background-color: rgba(240, 240, 240, 0.699);
+            padding: 5px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media query untuk tata letak responsif */
+        @media only screen and (max-width: 720px) {
+            .columns {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Bagian navigasi -->
+    <nav>
+        <ul>
+            <!-- Link untuk kembali ke halaman utama dengan teks tebal -->
+            <li><a href="index.html" style="font-weight: bold;">MEZEN</a></li>
+            <!-- Link untuk masuk ke halaman login -->
+            <li style="float: right;"><a href="main/index.php">LOGIN</a></li>
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+    <!-- Judul besar di tengah halaman -->
+    <center>
+        <h1 class="bg-primary text-white">Kami Siap Melayani</h1>
+    </center>
+    <br>
+
+    <!-- Bagian konten artikel -->
+    <article>
+        <div class="container">
+            <!-- Tiga kolom konten -->
+            <div class="columns">
+                <!-- Daftar harga untuk Troubleshoot problem -->
+                <ul class="price">
+                    <!-- Header daftar harga Troubleshoot problem -->
+                    <li class="header"><span class="fa fa-dashboard">Troubleshoot problem</span></li>
+                    <!-- Daftar sub-poin masalah -->
+                    <li class="bg-warning">Deteksi Kerusakan</li>
+                    <li class="bg-warning">Kerusakan Pada Mesin</li>
+                    <li class="bg-warning">Kerusakan Pada Suku Cadang</li>
+                    <li class="bg-warning">Kerusakan Pada Body</li>
+                    <li class="bg-warning"><span class="bg-warning"><b></b> Dan Lain-Lain</span></li>
+                </ul>
+            </div>
+            <div class="columns">
+                <!-- Daftar harga untuk Order Sparepart -->
+                <ul class="price" style="border-color: #777; box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.8);">
+                    <li class="header" style="background-color:#2980b9;"><span class="fa fa-cogs"> Order Sparepart</li>
+                    <!-- Daftar sub-poin untuk Order Sparepart -->
+                    <li class="bg-warning">Pembelian Sparepart/Suku Cadang Motor</li>
+                    <li class="bg-warning">Ban Luar Dan Dalam</li>
+                    <li class="bg-warning">Kaca Sepion</li>
+                    <li class="bg-warning">Kabel Gas</li>
+                    <li class="bg-warning">Jari-Jari</li>
+                    <li class="bg-warning">Busi</li>
+                    <li class="bg-warning">Dan Lain-Lain</li>
+                    <!-- Tombol untuk melihat persediaan -->
+                    <li class="grey"><a href="stok.html" class="button"><span class="fa fa-book"> Lihat Persediaan</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="columns">
+                <!-- Daftar harga untuk Service Machine -->
+                <ul class="price">
+                    <li class="header"><span class="fa fa-wrench"> Service Machine</span></li>
+                    <!-- Daftar sub-poin untuk Service Machine -->
+                    <li class="bg-warning">Perbaiki Mesin</li>
+                    <li class="bg-warning">Penutup Oli Bocor</li>
+                    <li class="bg-warning">Karbulator Rusak</li>
+                    <li class="bg-warning">Ganti Piston</li>
+                    <li class="bg-warning">Dan Lain-Lain</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="chartContainer" style="height: 250px; width: 100%;"></div>
+        <br />
+
+        <!-- Footer dengan informasi pembuat website -->
+        <footer class="text-center bg-warning">Web By <a href="index.html">MeZen</a> Copyright &copy; 2023</footer>
+    </article>
+</body>
+
+</html>
